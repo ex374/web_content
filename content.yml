@@ -1,0 +1,14 @@
+---
+- name: Copy the content to webserver
+  hosts: dev
+  tasks:
+   - name: set alpha content
+     copy: 
+      content: "Qura or sera"
+      dest: /var/www/html/index.html
+     tags: [never, alpha]
+   - name: set beta content
+     copy: 
+      content: "What will happen it will"
+      dest: /var/www/html/index.html
+     tags: [never, beta]
